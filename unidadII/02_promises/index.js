@@ -1,15 +1,15 @@
-// const somethingWillHappend = () => {
-//   return new Promise( (resolve, reject) => {
-//     if(false)
-//       resolve('(☞ﾟヮﾟ)☞ Promesa resuelta!!')
-//     else
-//       reject('Que malas son las mujeres 💥')
-//   } )
-// }
+const somethingWillHappend = () => {
+  return new Promise( (resolve, reject) => {
+    if(false)
+      resolve('(☞ﾟヮﾟ)☞ Promesa resuelta!!')
+    else
+      reject('Que malas son las mujeres 💥')
+  } )
+}
 
-// somethingWillHappend()
-//   .then( response => console.log( response ) )
-//   .catch( err => console.error( err ) )
+somethingWillHappend()
+  .then( response => console.log( response ) )
+  .catch( err => console.error( err ) )
 
 const something = () => {
   return new Promise( (resolve, reject) => {
