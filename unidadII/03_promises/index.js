@@ -8,12 +8,11 @@ const getUsers = () => {
       setTimeout( () => {
         resolve( users )
       }, 3000 )
-    }else{
-      reject( new Error('An error has ocurr') )
-    }
+    }else
+      reject( new Error('An error has occur') )
   } )
 }
 
 getUsers()
-  .then( response => console.log( response ) )
-  .catch( err => console.log(err) )
+  .then( response => console.log(response) )
+  .catch( err => console.error(err) )

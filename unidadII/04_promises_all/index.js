@@ -8,9 +8,8 @@ const getUsers = () => {
       setTimeout( () => {
         resolve( users )
       }, 3000 )
-    }else{
-      reject( new Error('An error has ocurr') )
-    }
+    }else
+      reject( new Error('An error has occur') )
   } )
 }
 
@@ -21,15 +20,15 @@ const something = () => {
     if(true){
       setTimeout( () => {
         resolve( 'Success!! ⭐' )
-      }, 1000 )
-    }else{
-      reject( new Error('An error has ocurr in second promise') )
-    }
+      }, 7000 )
+    }else
+      reject( new Error('An error has occur in second') )
   } )
 }
 
-Promise.all( [ getUsers(), something() ] )
+Promise.all( [getUsers(), something()] )
   .then( response => {
-    console.log( 'Array of results', response )
-  } )
-  .catch( err => console.log( err ) )
+    console.log('Array of responses', response)
+  })
+  .catch( err => console.error(err))
+
