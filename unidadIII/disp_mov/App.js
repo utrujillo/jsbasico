@@ -1,13 +1,11 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import LoginForm from './src/components/Login';
+import { StatusBar } from 'expo-status-bar'
+import { StyleSheet, View } from 'react-native'
+import LoginForm from './src/screens/Login'
 
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Hola mundoooooo!!</Text>
-      <Text>Esto es un texto nuevo</Text>
       <LoginForm />
       <StatusBar style="auto" />
     </View>
