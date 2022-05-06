@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { View, TextInput, Button } from 'react-native'
 
-const LoginForm = () => {
+const LoginForm = ( props ) => {
 
+  const { navigation } = props
   const [user, setUser] = useState()
   const [password, setPassword] = useState()
 
@@ -18,7 +19,8 @@ const LoginForm = () => {
       <Button 
         title="Enviar"
         onPress={ () => { 
-          console.log(`Usuario: ${user} Pass: ${password}`) 
+          console.log(`Usuario: ${user} Pass: ${password}`)
+          navigation.navigate('Home')
         } }
       />
     </View>

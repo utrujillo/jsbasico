@@ -1,15 +1,13 @@
-import { StatusBar } from 'expo-status-bar'
 import { StyleSheet, View } from 'react-native'
-import LoginForm from './src/screens/Login'
-
+import { NavigationContainer } from '@react-navigation/native'
+import NavigationStack from './src/navigation/NavigationStack'
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <LoginForm />
-      <StatusBar style="auto" />
-    </View>
-  );
+    <NavigationContainer>
+      <NavigationStack />
+    </NavigationContainer>
+  )
 }
 
 const styles = StyleSheet.create({
