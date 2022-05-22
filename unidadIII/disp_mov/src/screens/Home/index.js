@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { View, Text, TextInput, StyleSheet } from 'react-native'
 import useAPI from '../../hooks/API'
+import PokemonCard from '../../components/PokemonCard'
 
 const Home = () => {
 
@@ -23,7 +24,8 @@ const Home = () => {
       <TextInput 
         placeholder="Buscar Pokemon"
         style={styles.input} />
-      { pokemons.map( pokemon => <Text>{ pokemon.name }</Text> ) }
+      
+      { pokemons.map( pokemon => <PokemonCard pokemon={ pokemon } algo='hola a todos' /> ) }
     </View>
   )
 }
