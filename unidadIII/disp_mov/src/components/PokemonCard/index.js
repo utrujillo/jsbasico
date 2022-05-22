@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native'
 
 const PokemonCard = (props) => {
 
-  const { pokemon, algo } = props
+  const { pokemon } = props
   
   return(
     <View style={styles.horizontalCard}>

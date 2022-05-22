@@ -33,7 +33,7 @@ const Home = () => {
             placeholder="Buscar Pokemon"
             style={styles.input} />
           
-          { pokemons.map( pokemon => <PokemonCard pokemon={ pokemon } algo='hola a todos' /> ) }
+          { pokemons.map( pokemon => <PokemonCard pokemon={ pokemon } /> ) }
         </View>
       </ScrollView>
     </SafeAreaView>
