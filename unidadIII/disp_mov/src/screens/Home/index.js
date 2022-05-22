@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, TextInput, StyleSheet } from 'react-native'
 import useAPI from '../../hooks/API'
 
 const Home = () => {
@@ -19,12 +19,29 @@ const Home = () => {
   // console.log( 'Pokemons', pokemons )
 
   return(
-    <View>
-      {
-       pokemons.map( pokemon => <Text>{ pokemon.name }</Text> )
-      }
+    <View style={styles.container}>
+      <TextInput 
+        placeholder="Buscar Pokemon"
+        style={styles.input} />
+      { pokemons.map( pokemon => <Text>{ pokemon.name }</Text> ) }
     </View>
   )
 }
+
+const styles = StyleSheet.create({
+  container: {
+    width: '100%',
+    padding: 15
+  },
+  input: {
+    borderColor: '#0DFFDA',
+    borderWidth: 1,
+    height: 60,
+    paddingHorizontal: 15,
+    placeholderTextColor: '#12B39A',
+    borderRadius: 10,
+    marginBottom: 15
+  }
+})
 
 export default Home
