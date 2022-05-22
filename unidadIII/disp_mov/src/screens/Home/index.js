@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import { View, Text, TextInput, StyleSheet } from 'react-native'
+import { View, 
+         Text, 
+         TextInput, 
+         StyleSheet, 
+         SafeAreaView, 
+         ScrollView,
+         StatusBar } from 'react-native'
 import useAPI from '../../hooks/API'
 import PokemonCard from '../../components/PokemonCard'
 
@@ -20,19 +26,26 @@ const Home = () => {
   // console.log( 'Pokemons', pokemons )
 
   return(
-    <View style={styles.container}>
-      <TextInput 
-        placeholder="Buscar Pokemon"
-        style={styles.input} />
-      
-      { pokemons.map( pokemon => <PokemonCard pokemon={ pokemon } algo='hola a todos' /> ) }
-    </View>
+    <SafeAreaView style={styles.container}>
+      <ScrollView>
+        <View style={styles.view_container}>
+          <TextInput 
+            placeholder="Buscar Pokemon"
+            style={styles.input} />
+          
+          { pokemons.map( pokemon => <PokemonCard pokemon={ pokemon } algo='hola a todos' /> ) }
+        </View>
+      </ScrollView>
+    </SafeAreaView>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
-    width: '100%',
+    flex: 1,
+    paddingTop: StatusBar.currentHeight,
+  },
+  view_container: {
     padding: 15
   },
   input: {
